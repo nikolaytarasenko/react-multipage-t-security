@@ -1,8 +1,15 @@
+import CommonHero from '../scenes/CommonHero'
+import ComplexSecuritySystems from '../scenes/ComplexSecuritySystems'
+import { heroHome } from '../utils/constants'
+
 const HomePage = () => {
     return (
-        <div>
-            Home Page
-        </div>
+        <>
+            <div className="container">
+                <CommonHero data={heroHome} />
+            </div>
+            <ComplexSecuritySystems />
+        </>
     )
 }
 
