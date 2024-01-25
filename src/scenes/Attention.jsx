@@ -2,7 +2,7 @@ import attentionImg from '../assets/attention.svg'
 
 const Attention = () => {
     return (
-        <div className="pt-[20px] pb-[50px]">
+        <div className="pt-[20px] pb-[70px] xl:pb-[100px]">
             <div className="container">
                 <div className="flex flex-col-reverse xl:flex-row items-center gap-[30px] bg-red-50 rounded-[15px] p-[20px]">
                     <div>

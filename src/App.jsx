@@ -1,21 +1,24 @@
 import { useState, useEffect } from 'react'
-import Navbar from './scenes/Navbar'
 import { Routes, Route } from 'react-router-dom'
+import Navbar from './scenes/Navbar'
+import Attention from './scenes/Attention'
+import Contacts from './scenes/Contacts'
+import Footer from './scenes/Footer'
 import HomePage from './pages/HomePage'
 
 function App() {
     const [isPageScrolled, setIsPageScrolled] = useState(false)
 
     useEffect(() => {
-        const checkScroll = () => {
+        const checkScrollOffset = () => {
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
             scrollTop > 0 ? setIsPageScrolled(true) : setIsPageScrolled(false)
         }
 
-        window.addEventListener('scroll', checkScroll)
+        window.addEventListener('scroll', checkScrollOffset)
 
-        return () => window.removeEventListener('scroll', checkScroll)
+        return () => window.removeEventListener('scroll', checkScrollOffset)
     }, [isPageScrolled])
 
     return (
@@ -25,7 +28,10 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                 </Routes>
+                <Attention />
+                <Contacts />
             </main>
+            <Footer />
         </div>
     )
 }

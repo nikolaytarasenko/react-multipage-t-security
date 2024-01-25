@@ -32,7 +32,7 @@ const Navbar = ({ isPageScrolled }) => {
                             )}
                         </div>
                         <nav className='uppercase'>
-                            <ul className={`fixed xl:relative top-0 xl:top-auto left-0 xl:left-auto right-0 xl:right-auto bottom-0 xl:bottom-auto w-full z-[-1] xl:z-auto bg-white transition duration-200 translate-x-[-100%] xl:translate-x-0 flex justify-center xl:justify-between items-center flex-col xl:flex-row gap-1 xl:gap-12 px-2 xl:px-0 ${isMenuOpen ? 'translate-x-0' : ''}`}>
+                            <ul className={`fixed xl:relative top-0 xl:top-auto left-0 xl:left-auto right-0 xl:right-auto bottom-0 xl:bottom-auto w-full z-[-1] xl:z-auto bg-white transition duration-200 xl:translate-x-0 flex justify-center xl:justify-between items-center flex-col xl:flex-row gap-1 xl:gap-12 px-2 xl:px-0 ${isMenuOpen ? 'translate-x-0' : 'translate-x-[-100%]'}`}>
                                 <li className="py-3 xl:py-6">
                                     <Link to="/" className="font-bold transition-colors hover:text-blue-50">Головна</Link>
                                 </li>
