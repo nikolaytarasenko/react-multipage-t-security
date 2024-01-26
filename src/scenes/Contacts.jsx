@@ -9,7 +9,7 @@ const Contacts = () => {
             <div className="container">
                 <div className="flex flex-col xl:flex-row justify-between items-center gap-[50px]">
                     <div className="flex flex-col items-center w-full xl:w-[50%] text-center">
-                        <h2 className="mb-[20px] text-[36px] font-bold">Завжди на зв'язку!</h2>
+                        <h2 className="mb-[20px] text-[24px] xl:text-[36px] font-bold">Завжди на зв'язку!</h2>
                         <p className="mb-[20px]">Чи готові почати свій наступний проект з нами? Чудово! Зателефонуйте нам або надішліть нам листа, і ми зв'яжемося з вами якнайшвидше!</p>
                         <div className="flex flex-wrap justify-center gap-[30px] mb-[30px] xl:mb-[20px]">
                             <a href="tel:+380662458535" className="transition-opacity hover:opacity-80 flex justify-center items-center gap-[20px]">

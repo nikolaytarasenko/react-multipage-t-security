@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import Button from '../components/Button'
@@ -9,6 +9,12 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 const Navbar = ({ isPageScrolled }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+
+    useEffect(() => {
+        isMenuOpen ?
+            document.body.classList.add('overflow-hidden') :
+            document.body.classList.remove('overflow-hidden')
+    }, [isMenuOpen])
 
     const xlMediaQuery = '(max-width: 1199px)'
 
@@ -42,7 +48,7 @@ const Navbar = ({ isPageScrolled }) => {
                             )}
                         </div>
                         <nav className='uppercase'>
-                            <ul className={`fixed xl:relative top-0 xl:top-auto left-0 xl:left-auto right-0 xl:right-auto bottom-0 xl:bottom-auto w-full z-[-1] xl:z-auto bg-white transition duration-200 xl:translate-x-0 flex justify-center xl:justify-between items-center flex-col xl:flex-row gap-1 xl:gap-12 px-2 xl:px-0 ${isMenuOpen ? 'translate-x-0' : 'translate-x-[-100%]'}`}>
+                            <ul className={`nav-ul fixed xl:relative top-0 xl:top-auto left-0 xl:left-auto right-0 xl:right-auto bottom-0 xl:bottom-auto w-full z-[-1] xl:z-auto bg-white transition duration-200 xl:translate-x-0 block text-center xl:text-left xl:flex xl:justify-between xl:items-center xl:flex-row xl:gap-12 px-2 xl:px-0 pt-[150px] pb-[40px] xl:pt-0 xl:pb-0 overflow-auto xl:overflow-visible ${isMenuOpen ? 'translate-x-0' : 'translate-x-[-100%]'}`}>
                                 <li className="py-3 xl:py-6">
                                     <Link to="/" className="font-bold transition-colors hover:text-blue-50" onClick={closeMenuHandler}>Головна</Link>
                                 </li>
@@ -82,7 +88,7 @@ const Navbar = ({ isPageScrolled }) => {
                                     </ul>
                                 </li>
                                 <li className="py-3 xl:py-6">
-                                    <AnchorLink href="#contacts" className="font-bold transition-colors hover:text-blue-50" onClick={closeMenuHandler}>Контакти</AnchorLink>
+                                    <AnchorLink href="#contacts" className="font-bold transition-colors hover:text-blue-50" offset="70" onClick={closeMenuHandler}>Контакти</AnchorLink>
                                 </li>
                                 <li>
                                     <Button color="blue">Зв'язатися з нами</Button>
