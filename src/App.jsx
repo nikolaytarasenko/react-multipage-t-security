@@ -7,6 +7,8 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import AlarmPage from './pages/AlarmPage'
 import AutomationPage from './pages/AutomationPage'
+import ScsPage from './pages/ScsPage'
+import ElectricalPage from './pages/ElectricalPage'
 
 function App() {
     const [isPageScrolled, setIsPageScrolled] = useState(false)
@@ -32,6 +34,8 @@ function App() {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/alarm" element={<AlarmPage />} />
                     <Route path="/automation" element={<AutomationPage />} />
+                    <Route path="/scs" element={<ScsPage />} />
+                    <Route path="/electrical" element={<ElectricalPage />} />
                 </Routes>
                 <Contacts />
             </main>

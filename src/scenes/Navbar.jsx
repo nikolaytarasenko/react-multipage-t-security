@@ -62,10 +62,10 @@ const Navbar = ({ isPageScrolled }) => {
                                             <Link to="/automation" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Автоматизація та диспетчеризація інженерних систем</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Структуровані кабельні системи (СКС)</Link>
+                                            <Link to="/scs" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Структуровані кабельні системи (СКС)</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Електромонтажні роботи</Link>
+                                            <Link to="/electrical" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Електромонтажні роботи</Link>
                                         </li>
                                         <li>
                                             <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Системи пожежної безпеки</Link>
