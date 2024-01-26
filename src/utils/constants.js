@@ -1,5 +1,7 @@
 import homeHeroImg from '../assets/password.svg'
 import aboutHeroImg from '../assets/about-hero.svg'
+import alarmHeroVideo from '../assets/6.mp4'
+import automationHeroVideo from '../assets/2.mp4'
 
 export const heroHome = {
     title: 'ТОВ Інженерно-будівельна компанія "Територія Безпеки"',
@@ -19,4 +21,18 @@ export const heroAbout = {
     ],
     img: aboutHeroImg,
     anchor: '#about-info'
+}
+
+export const heroAlarm = {
+    title: 'Охоронна сигналізація',
+    text: [],
+    video: alarmHeroVideo,
+    anchor: '#alarm-info'
+}
+
+export const heroAutomation = {
+    title: 'Автоматизація та диспетчеризація інженерних систем',
+    text: [],
+    video: automationHeroVideo,
+    anchor: '#automation-info'
 }

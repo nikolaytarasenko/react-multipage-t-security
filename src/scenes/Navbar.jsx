@@ -4,14 +4,23 @@ import logo from '../assets/logo.svg'
 import Button from '../components/Button'
 import { IoMenu, IoClose } from 'react-icons/io5'
 import { MdKeyboardArrowDown } from 'react-icons/md'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Navbar = ({ isPageScrolled }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
+    const xlMediaQuery = '(max-width: 1199px)'
+
     const dropdownHandler = () => {
-        if (window.matchMedia('(max-width: 1199px)').matches) {
+        if (window.matchMedia(xlMediaQuery).matches) {
             setIsDropdownOpen(prev => !prev)
+        }
+    }
+
+    const closeMenuHandler = () => {
+        if (window.matchMedia(xlMediaQuery).matches) {
+            setIsMenuOpen(false)
         }
     }
 
@@ -35,10 +44,10 @@ const Navbar = ({ isPageScrolled }) => {
                         <nav className='uppercase'>
                             <ul className={`fixed xl:relative top-0 xl:top-auto left-0 xl:left-auto right-0 xl:right-auto bottom-0 xl:bottom-auto w-full z-[-1] xl:z-auto bg-white transition duration-200 xl:translate-x-0 flex justify-center xl:justify-between items-center flex-col xl:flex-row gap-1 xl:gap-12 px-2 xl:px-0 ${isMenuOpen ? 'translate-x-0' : 'translate-x-[-100%]'}`}>
                                 <li className="py-3 xl:py-6">
-                                    <Link to="/" className="font-bold transition-colors hover:text-blue-50">Головна</Link>
+                                    <Link to="/" className="font-bold transition-colors hover:text-blue-50" onClick={closeMenuHandler}>Головна</Link>
                                 </li>
                                 <li className="py-3 xl:py-6">
-                                    <Link to="/about" className="font-bold transition-colors hover:text-blue-50">Про компанію</Link>
+                                    <Link to="/about" className="font-bold transition-colors hover:text-blue-50" onClick={closeMenuHandler}>Про компанію</Link>
                                 </li>
                                 <li className="group relative py-3 xl:py-6 text-center xl:text-left" onClick={dropdownHandler}>
                                     <span className="font-bold cursor-pointer xl:cursor-default transition-colors hover:text-blue-50">
@@ -47,33 +56,33 @@ const Navbar = ({ isPageScrolled }) => {
                                     </span>
                                     <ul className={`xl:absolute xl:left-[-80px] xl:invisible transition ease-in-out duration-150 xl:opacity-0 xl:translate-y-8 xl:group-hover:visible xl:group-hover:opacity-100 xl:group-hover:translate-y-4 mt-[15px] xl:mt-0 xl:shadow-md bg-white xl:min-w-[320px] ${isDropdownOpen ? 'relative visible opacity-100' : 'absolute invisible opacity-0'}`}>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white">Охоронна сигналізація</Link>
+                                            <Link to="/alarm" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Охоронна сигналізація</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white">Автоматизація та диспетчеризація інженерних систем</Link>
+                                            <Link to="/automation" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Автоматизація та диспетчеризація інженерних систем</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white">Структуровані кабельні системи (СКС)</Link>
+                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Структуровані кабельні системи (СКС)</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white">Електромонтажні роботи</Link>
+                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Електромонтажні роботи</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white">Системи пожежної безпеки</Link>
+                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Системи пожежної безпеки</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white">Мультимедійні системи</Link>
+                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Мультимедійні системи</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white">Системи контролю доступу (СКУД)</Link>
+                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Системи контролю доступу (СКУД)</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white">Відеоспостереження</Link>
+                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Відеоспостереження</Link>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="py-3 xl:py-6">
-                                    <Link to="#contacts" className="font-bold transition-colors hover:text-blue-50">Контакти</Link>
+                                    <AnchorLink href="#contacts" className="font-bold transition-colors hover:text-blue-50" onClick={closeMenuHandler}>Контакти</AnchorLink>
                                 </li>
                                 <li>
                                     <Button color="blue">Зв'язатися з нами</Button>

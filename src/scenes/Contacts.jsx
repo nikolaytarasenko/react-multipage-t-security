@@ -5,7 +5,7 @@ import Button from '../components/Button'
 
 const Contacts = () => {
     return (
-        <div className="bg-blue-50 py-[50px] text-white overflow-y-hidden">
+        <div className="bg-blue-50 py-[50px] text-white overflow-y-hidden" id="contacts">
             <div className="container">
                 <div className="flex flex-col xl:flex-row justify-between items-center gap-[50px]">
                     <div className="flex flex-col items-center w-full xl:w-[50%] text-center">
