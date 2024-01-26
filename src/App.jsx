@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './scenes/Navbar'
-import Attention from './scenes/Attention'
 import Contacts from './scenes/Contacts'
 import Footer from './scenes/Footer'
 import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
 
 function App() {
     const [isPageScrolled, setIsPageScrolled] = useState(false)
@@ -19,7 +19,7 @@ function App() {
         window.addEventListener('scroll', checkScrollOffset)
 
         return () => window.removeEventListener('scroll', checkScrollOffset)
-    }, [isPageScrolled])
+    }, [])
 
     return (
         <div className="page">
@@ -27,8 +27,8 @@ function App() {
             <main className="main">
                 <Routes>
                     <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
                 </Routes>
-                <Attention />
                 <Contacts />
             </main>
             <Footer />

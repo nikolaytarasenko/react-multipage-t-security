@@ -4,7 +4,7 @@ import img3 from '../assets/third-col.svg'
 
 const ComplexSecuritySystems = () => {
     return (
-        <div className="bg-blue-50 pb-[80px] overflow-y-hidden">
+        <div className="bg-blue-50 pb-[80px] overflow-y-hidden" id="complex-security-systems">
             <div className="container">
                 <h3 className="py-[50px] xl:py-[80px] max-w-[500px] mx-auto text-white text-[21px] leading-[31px] text-center">Монтаж комплексних систем безпеки проводять для забезпечення повного контролю території, що охороняється. До складу комплексних систем безпеки входять:</h3>
                 <div className="flex flex-col xl:flex-row gap-[30px] xl:gap-0 justify-between items-center text-center">

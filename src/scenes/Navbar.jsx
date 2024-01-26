@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import Button from '../components/Button'
 import { IoMenu, IoClose } from 'react-icons/io5'
+import { MdKeyboardArrowDown } from 'react-icons/md'
 
 const Navbar = ({ isPageScrolled }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -40,7 +41,10 @@ const Navbar = ({ isPageScrolled }) => {
                                     <Link to="/about" className="font-bold transition-colors hover:text-blue-50">Про компанію</Link>
                                 </li>
                                 <li className="group relative py-3 xl:py-6 text-center xl:text-left" onClick={dropdownHandler}>
-                                    <span className="font-bold cursor-pointer xl:cursor-default transition-colors hover:text-blue-50">Послуги</span>
+                                    <span className="font-bold cursor-pointer xl:cursor-default transition-colors hover:text-blue-50">
+                                        Послуги
+                                        <MdKeyboardArrowDown size={20} className="inline-block ml-1 pb-[2px]" />
+                                    </span>
                                     <ul className={`xl:absolute xl:left-[-80px] xl:invisible transition ease-in-out duration-150 xl:opacity-0 xl:translate-y-8 xl:group-hover:visible xl:group-hover:opacity-100 xl:group-hover:translate-y-4 mt-[15px] xl:mt-0 xl:shadow-md bg-white xl:min-w-[320px] ${isDropdownOpen ? 'relative visible opacity-100' : 'absolute invisible opacity-0'}`}>
                                         <li>
                                             <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white">Охоронна сигналізація</Link>

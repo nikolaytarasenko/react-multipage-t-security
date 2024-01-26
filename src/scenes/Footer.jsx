@@ -6,7 +6,7 @@ import logo from '../assets/logo.svg'
 
 const Footer = () => {
     return (
-        <footer className="pt-[50px] pb-[80px]">
+        <footer className="pt-[50px] pb-[70px]">
             <div className="container">
                 <div className="flex justify-between items-center xl:items-start flex-col xl:flex-row gap-[40px] xl:gap-0 text-center xl:text-left">
                     <div>

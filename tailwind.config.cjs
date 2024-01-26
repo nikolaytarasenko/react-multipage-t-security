@@ -21,7 +21,17 @@ module.exports = {
       backgroundImage: {},
       boxShadow: {
         'header': '0 4px 15px rgba(22, 22, 22, 0.2)',
-      }
+      },
+      keyframes: {
+        scroll: {
+          '0%': { opacity: '0' },
+          '10%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(15px)', opacity: '0' },
+        },
+      },
+      animation: {
+        'scrolling-mouse': 'scroll 1s linear infinite',
+      },
     },
     screens: {
       xs: "480px",
