@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import facebook from '../assets/facebook.svg'
 import instagram from '../assets/instagram.svg'
 import telegram from '../assets/telegram.svg'
@@ -24,7 +25,7 @@ const Footer = () => {
                                 <Link to="/about" className="uppercase font-bold transition-colors hover:text-blue-50 mb-[7px] block">Компанія</Link>
                             </li>
                             <li>
-                                <Link to="#contacts" className="uppercase font-bold transition-colors hover:text-blue-50 mb-[7px] block">Контакти</Link>
+                                <AnchorLink href="#contacts" className="uppercase font-bold transition-colors hover:text-blue-50 mb-[7px] block">Контакти</AnchorLink>
                             </li>
                         </ul>
                     </div>

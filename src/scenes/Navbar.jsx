@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { AppContext } from '../context/Context'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import Button from '../components/Button'
@@ -9,6 +10,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 const Navbar = ({ isPageScrolled }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+    const { toggleModal } = useContext(AppContext)
 
     useEffect(() => {
         isMenuOpen ?
@@ -28,6 +30,10 @@ const Navbar = ({ isPageScrolled }) => {
         if (window.matchMedia(xlMediaQuery).matches) {
             setIsMenuOpen(false)
         }
+    }
+
+    const handleButtonClick = () => {
+        toggleModal()
     }
 
     return (
@@ -90,7 +96,7 @@ const Navbar = ({ isPageScrolled }) => {
                                 <li className="py-3 xl:py-6">
                                     <AnchorLink href="#contacts" className="font-bold transition-colors hover:text-blue-50" offset="70" onClick={closeMenuHandler}>Контакти</AnchorLink>
                                 </li>
-                                <li>
+                                <li onClick={handleButtonClick}>
                                     <Button color="blue">Зв'язатися з нами</Button>
                                 </li>
                             </ul>

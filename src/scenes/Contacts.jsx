@@ -1,9 +1,17 @@
+import { useContext } from 'react'
+import { AppContext } from '../context/Context'
 import contactsImg from '../assets/contacts.svg'
 import phone from '../assets/phone.svg'
 import mail from '../assets/mail.svg'
 import Button from '../components/Button'
 
 const Contacts = () => {
+    const { toggleModal } = useContext(AppContext)
+
+    const handleButtonClick = () => {
+        toggleModal()
+    }
+
     return (
         <div className="bg-blue-50 py-[50px] text-white overflow-y-hidden" id="contacts">
             <div className="container">
@@ -25,7 +33,7 @@ const Contacts = () => {
                                 <span>t-security@ukr.net</span>
                             </a>
                         </div>
-                        <div className="flex justify-center">
+                        <div className="flex justify-center" onClick={handleButtonClick}>
                             <Button color="white">Зв'язатися з нами</Button>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { AppContext } from './context/Context'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './scenes/Navbar'
 import Contacts from './scenes/Contacts'
@@ -13,9 +14,11 @@ import FirePage from './pages/FirePage'
 import MultimediaPage from './pages/MultimediaPage'
 import AcsPage from './pages/AcsPage'
 import VideoPage from './pages/VideoPage'
+import Modal from './components/Modal'
 
 function App() {
     const [isPageScrolled, setIsPageScrolled] = useState(false)
+    const { isModalOpen } = useContext(AppContext)
 
     useEffect(() => {
         const checkScrollOffset = () => {
@@ -48,6 +51,7 @@ function App() {
                 <Contacts />
             </main>
             <Footer />
+            {isModalOpen && <Modal />}
         </div>
     )
 }
