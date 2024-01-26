@@ -11,6 +11,8 @@ import ScsPage from './pages/ScsPage'
 import ElectricalPage from './pages/ElectricalPage'
 import FirePage from './pages/FirePage'
 import MultimediaPage from './pages/MultimediaPage'
+import AcsPage from './pages/AcsPage'
+import VideoPage from './pages/VideoPage'
 
 function App() {
     const [isPageScrolled, setIsPageScrolled] = useState(false)
@@ -40,6 +42,8 @@ function App() {
                     <Route path="/electrical" element={<ElectricalPage />} />
                     <Route path="/fire" element={<FirePage />} />
                     <Route path="/multimedia" element={<MultimediaPage />} />
+                    <Route path="/acs" element={<AcsPage />} />
+                    <Route path="/video" element={<VideoPage />} />
                 </Routes>
                 <Contacts />
             </main>

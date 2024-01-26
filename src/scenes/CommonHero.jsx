@@ -4,7 +4,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 const CommonHero = ({ data: { title, text, img, video, anchor } }) => {
     return (
         <div className="container">
-            <div className="relative lg:h-screen xl:min-h-[500px] mt-[130px] pb-[50px] lg:pb-0 lg:mt-0">
+            <div className="relative lg:h-screen xl:min-h-[500px] mt-[130px] pb-[10px] lg:pb-0 lg:mt-0">
                 <div className="h-full flex items-center flex-col lg:flex-row">
                     <div className="lg:max-w-[55%] lg:pr-8">
                         <h1 className="hero-title">{title}</h1>

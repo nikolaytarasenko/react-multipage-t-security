@@ -6,6 +6,8 @@ import scsHeroVideo from '../assets/4.mp4'
 import electricalHeroVideo from '../assets/5.mp4'
 import fireHeroVideo from '../assets/7.mp4'
 import multimediaHeroVideo from '../assets/3.mp4'
+import acsHeroVideo from '../assets/8.mp4'
+import videoHeroVideo from '../assets/1.mp4'
 
 export const heroHome = {
     title: 'ТОВ Інженерно-будівельна компанія "Територія Безпеки"',
@@ -67,4 +69,18 @@ export const heroMultimedia = {
     text: [],
     video: multimediaHeroVideo,
     anchor: '#multimedia-info'
+}
+
+export const heroAcs = {
+    title: 'Системи контролю доступу (СКУД)',
+    text: [],
+    video: acsHeroVideo,
+    anchor: '#acs-info'
+}
+
+export const heroVideo = {
+    title: 'Відеоспостереження',
+    text: [],
+    video: videoHeroVideo,
+    anchor: '#video-info'
 }

@@ -74,10 +74,10 @@ const Navbar = ({ isPageScrolled }) => {
                                             <Link to="/multimedia" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Мультимедійні системи</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Системи контролю доступу (СКУД)</Link>
+                                            <Link to="/acs" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Системи контролю доступу (СКУД)</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Відеоспостереження</Link>
+                                            <Link to="/video" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Відеоспостереження</Link>
                                         </li>
                                     </ul>
                                 </li>
