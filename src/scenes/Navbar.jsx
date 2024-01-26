@@ -68,10 +68,10 @@ const Navbar = ({ isPageScrolled }) => {
                                             <Link to="/electrical" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Електромонтажні роботи</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Системи пожежної безпеки</Link>
+                                            <Link to="/fire" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Системи пожежної безпеки</Link>
                                         </li>
                                         <li>
-                                            <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Мультимедійні системи</Link>
+                                            <Link to="/multimedia" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Мультимедійні системи</Link>
                                         </li>
                                         <li>
                                             <Link to="/" className="block text-[14px] normal-case xl:text-[14px] transition-colors py-2 px-3 hover:bg-blue-50 hover:text-white" onClick={closeMenuHandler}>Системи контролю доступу (СКУД)</Link>

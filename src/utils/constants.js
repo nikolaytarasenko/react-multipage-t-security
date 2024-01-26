@@ -4,6 +4,8 @@ import alarmHeroVideo from '../assets/6.mp4'
 import automationHeroVideo from '../assets/2.mp4'
 import scsHeroVideo from '../assets/4.mp4'
 import electricalHeroVideo from '../assets/5.mp4'
+import fireHeroVideo from '../assets/7.mp4'
+import multimediaHeroVideo from '../assets/3.mp4'
 
 export const heroHome = {
     title: 'ТОВ Інженерно-будівельна компанія "Територія Безпеки"',
@@ -51,4 +53,18 @@ export const heroElectrical = {
     text: [],
     video: electricalHeroVideo,
     anchor: '#electrical-info'
+}
+
+export const heroFire = {
+    title: 'Системи пожежної безпеки',
+    text: [],
+    video: fireHeroVideo,
+    anchor: '#fire-info'
+}
+
+export const heroMultimedia = {
+    title: 'Мультимедійні системи',
+    text: [],
+    video: multimediaHeroVideo,
+    anchor: '#multimedia-info'
 }

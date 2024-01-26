@@ -9,6 +9,8 @@ import AlarmPage from './pages/AlarmPage'
 import AutomationPage from './pages/AutomationPage'
 import ScsPage from './pages/ScsPage'
 import ElectricalPage from './pages/ElectricalPage'
+import FirePage from './pages/FirePage'
+import MultimediaPage from './pages/MultimediaPage'
 
 function App() {
     const [isPageScrolled, setIsPageScrolled] = useState(false)
@@ -36,6 +38,8 @@ function App() {
                     <Route path="/automation" element={<AutomationPage />} />
                     <Route path="/scs" element={<ScsPage />} />
                     <Route path="/electrical" element={<ElectricalPage />} />
+                    <Route path="/fire" element={<FirePage />} />
+                    <Route path="/multimedia" element={<MultimediaPage />} />
                 </Routes>
                 <Contacts />
             </main>
