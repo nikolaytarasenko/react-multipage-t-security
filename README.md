@@ -1,3 +1,3 @@
-# React Multipage Website T-Security
+# T-Security React Multipage Website
 
 React, React Router, Context API, Tailwind CSS
